@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F996742016B20C7300BE2CC2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F996741F16B20C7300BE2CC2 /* main.cpp */; };
+		F996742216B20C7300BE2CC2 /* lua_objc.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F996742116B20C7300BE2CC2 /* lua_objc.1 */; };
+		F996743716B20D9200BE2CC2 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F996743316B20D5600BE2CC2 /* libffi.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F996743016B20D5600BE2CC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F996742816B20D5500BE2CC2 /* libffi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6F980BA147386130008F121;
+			remoteInfo = "libffi iOS";
+		};
+		F996743216B20D5600BE2CC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F996742816B20D5500BE2CC2 /* libffi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6C43CB3D1534E9D100162364;
+			remoteInfo = "libffi OS X";
+		};
+		F996743516B20D8700BE2CC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F996742816B20D5500BE2CC2 /* libffi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C43CB3C1534E9D100162364;
+			remoteInfo = "libffi OS X";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F996741916B20C7300BE2CC2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				F996742216B20C7300BE2CC2 /* lua_objc.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F996741B16B20C7300BE2CC2 /* lua-objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "lua-objc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F996741F16B20C7300BE2CC2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F996742116B20C7300BE2CC2 /* lua_objc.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lua_objc.1; sourceTree = "<group>"; };
+		F996742816B20D5500BE2CC2 /* libffi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffi.xcodeproj; path = ../libffi/libffi.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F996741816B20C7300BE2CC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F996743716B20D9200BE2CC2 /* libffi.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F996741016B20C7300BE2CC2 = {
+			isa = PBXGroup;
+			children = (
+				F996742816B20D5500BE2CC2 /* libffi.xcodeproj */,
+				F996741E16B20C7300BE2CC2 /* lua-objc */,
+				F996741C16B20C7300BE2CC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F996741C16B20C7300BE2CC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F996741B16B20C7300BE2CC2 /* lua-objc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F996741E16B20C7300BE2CC2 /* lua-objc */ = {
+			isa = PBXGroup;
+			children = (
+				F996741F16B20C7300BE2CC2 /* main.cpp */,
+				F996742116B20C7300BE2CC2 /* lua_objc.1 */,
+			);
+			path = "lua-objc";
+			sourceTree = "<group>";
+		};
+		F996742916B20D5500BE2CC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F996743116B20D5600BE2CC2 /* libffi.a */,
+				F996743316B20D5600BE2CC2 /* libffi.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F996741A16B20C7300BE2CC2 /* lua-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F996742516B20C7300BE2CC2 /* Build configuration list for PBXNativeTarget "lua-objc" */;
+			buildPhases = (
+				F996741716B20C7300BE2CC2 /* Sources */,
+				F996741816B20C7300BE2CC2 /* Frameworks */,
+				F996741916B20C7300BE2CC2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F996743616B20D8700BE2CC2 /* PBXTargetDependency */,
+			);
+			name = "lua-objc";
+			productName = "lua-objc";
+			productReference = F996741B16B20C7300BE2CC2 /* lua-objc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F996741216B20C7300BE2CC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = F996741516B20C7300BE2CC2 /* Build configuration list for PBXProject "lua-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F996741016B20C7300BE2CC2;
+			productRefGroup = F996741C16B20C7300BE2CC2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F996742916B20D5500BE2CC2 /* Products */;
+					ProjectRef = F996742816B20D5500BE2CC2 /* libffi.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F996741A16B20C7300BE2CC2 /* lua-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F996743116B20D5600BE2CC2 /* libffi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libffi.a;
+			remoteRef = F996743016B20D5600BE2CC2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F996743316B20D5600BE2CC2 /* libffi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libffi.a;
+			remoteRef = F996743216B20D5600BE2CC2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F996741716B20C7300BE2CC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F996742016B20C7300BE2CC2 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F996743616B20D8700BE2CC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libffi OS X";
+			targetProxy = F996743516B20D8700BE2CC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F996742316B20C7300BE2CC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../libffi/OSX/include;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F996742416B20C7300BE2CC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../libffi/OSX/include;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F996742616B20C7300BE2CC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F996742716B20C7300BE2CC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F996741516B20C7300BE2CC2 /* Build configuration list for PBXProject "lua-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F996742316B20C7300BE2CC2 /* Debug */,
+				F996742416B20C7300BE2CC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F996742516B20C7300BE2CC2 /* Build configuration list for PBXNativeTarget "lua-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F996742616B20C7300BE2CC2 /* Debug */,
+				F996742716B20C7300BE2CC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F996741216B20C7300BE2CC2 /* Project object */;
+}
