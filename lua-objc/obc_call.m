@@ -6,7 +6,55 @@
 #import <objc/message.h>
 #import <Foundation/Foundation.h>
 
+#include "lobjc.h"
+
 LUA_API int objc_call(lua_State* L);
+
+LUA_API int lobjc_pushselector(lua_State* L){
+    luaL_argcheck(L, lua_gettop(L) == 1, 2, "accept only one arg");
+    luaL_checkstring(L, 1);
+    SEL sel = sel_registerName(lua_tostring(L, 1));
+    if(sel != 0)
+        lua_pushlightuserdata(L, sel);
+    return sel != 0 ? 1 : 0;
+}
+
+LUA_API int lobjc_pushclass(lua_State* L){
+    luaL_argcheck(L, lua_gettop(L) == 1, 2, "accept only one arg");
+    luaL_checkstring(L, 1);
+    Class clz = NSClassFromString([NSString stringWithUTF8String: lua_tostring(L, 1)]);
+    if(clz != nil) {
+        void* data = lua_newuserdata(L, sizeof(clz));
+        *(Class*)data = clz;
+        lobjc_objmeta(L);
+        lua_setmetatable(L, -2);
+        
+        [clz retain];
+    }
+    return clz != 0 ? 1 : 0;
+}
+
+static int _objc__index(lua_State* L) {
+    // TODO: return bound ffi structure for methods
+    return 0;
+}
+
+static int _objc__gc(lua_State* L){
+    id obj = *(id*)lua_touserdata(L, 1);
+    [obj release];
+    return 0;
+}
+
+void lobjc_objmeta(lua_State* L) {
+    if(luaL_newmetatable(L, "_objc_meta") == 0)
+        return;
+    
+    lua_pushstring( L, "__gc" );
+    lua_pushcclosure( L, _objc__gc, 0 );
+    lua_rawset( L, -3 );
+    
+    // TODO: __index
+}
 
 static int number_of_args(char const* sig){
     return 0;
@@ -30,6 +78,8 @@ int objc_call(lua_State* L){
     Method method = class_getInstanceMethod([obj class], cmd);
     char const* sig = method_getTypeEncoding(method);
 
+    method_getImplementation(method);
+    // IMP imp =
     ffi_type *arg_types[16], *ret_type; // todo: more than 16 args?
     ffi_status status;
     void *arg_values[16];
